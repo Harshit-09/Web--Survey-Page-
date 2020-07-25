@@ -1,40 +1,77 @@
 <!DOCTYPE html>
-<head>
+
+
     <title>Survey Form</title>
+    <href="project.css">
+
+
     <body style="background-color:lightgreen;">
-        <h1 style=text-align:center>Good Vibes</h1>
-        <p style="text-align: center;">Tell us something positive that happen to you today.</p>
+        <main>
+        <h1 style=text-align:center>Good Vibes Form</h1>
 
-        <form>
-            <label>Name</label>
-            <input type="text" value="Enter your name">
-            <br>
+        <div class="master-div-style">
+        <p id="description" style="text-align: center;">Tell us something positive that happen to you today.</p>
+                    
+        <form id="survey-form" action="/do-something">            
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="name" id="name-label">Name</label>
+                </div>
 
-            <label>Email</label>
-            <input type="email" value="Enter your Email address">
-            <br>
+                <div class="fields">
+                    <input type="text" value="Enter your name" class ="input-fields" id="name" required>
+                </div>
+            </div>
 
-            <label>On scale of 1-10, how good was it?</label>
-            <input type="text" value="Enter a number between 1 and 10">
-            <br>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="email" id="email-label">Email</label>
+                </div>
+                <div class="fields">
+                    <input type="email" value="Enter your Email address" class="input-fields" required>
+                </div>
+            </div>
 
-            <label for="Location">Where did it happen?</label>
-            <select id="Location">
-                <option value="At home">At home</option>
-                <option>At office</option>
-                <option>At trainig center </option>
-            </select>
-            <br>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="number" id="number-label">On scale of 1-10, how good was it?</label>
+                </div>
+                <div class="fields">
+                    <input type="number" value="Enter a number between 1 and 10" min="1" max="10">
+                </div>
+            </div>
 
-            <label>When did it happen</label>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="Location" id="dropdown-label">Where did it happen?</label>
+                    <select id="Location">
+                        <option value="At home">At home</option>
+                        <option>At office</option>
+                        <option>At trainig center </option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="time-of-day">When did it happen</label>
+                </div>
+                <div class="fields">
+                    <ul id="time-of-day" style="list-style: none;">
+                      <li class="radio">
+                          
             <input type="radio">
             <label>Morning</label><br>
             <input type="radio">
             <label>Afternoon</label><br>
             <input type="radio">
             <label>Evening</label><br>
-            
-            <label>What emotion did you experienced</label>
+
+            <div class="form-rows">
+                <div class="labels">
+                    </div><label for="feelings">What emotion did you experienced</label>
             <input type="checkbox">
             <label>Excited</label><br>
             <input type="checkbox">
@@ -45,9 +82,19 @@
             <label>Loved</label><br>
             <input type="checkbox">
             <label>Enthusiastic</label><br>
+            </div>
+        </div>
 
-            <label>Describe your experience.</label>
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="event-details">Describe your experience.</label>
             <textarea value="message" rows="12" cols="30">Write your exprence</textarea>
+                </div>
+            </div>
+            <button class="button" id="submit" type="submit">Submit</button>
         </form>
+    </div>
     </body>
+</href>
 </head>
+</html>
